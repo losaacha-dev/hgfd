@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="id">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Acha Beauty Studio | Makeup &amp; Beauty Portfolio
+  </title>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&amp;family=Poppins:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+  <style>
+   * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      overflow-x: hidden;
+      color: #786b7c;
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg,#fce7f3,#f3e8ff,#e9d5ff,#fbcfe8);
+      background-size: 300% 300%;
+      animation: pinkPurpleBackground 12s ease infinite;
+    }
+    @keyframes pinkPurpleBackground {
+      0%,100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+    @keyframes fadeIn { from {opacity:0} to {opacity:1} }
+    @keyframes slideUp {
+      from { opacity:0; transform:translateY(30px); }
+      to { opacity:1; transform:translateY(0); }
+    }
+    @keyframes float {
+      0%,100% { transform:translateY(0); }
+      50% { transform:translateY(-10px); }
+    }
+    @keyframes fontGradient {
+      0% { background-position:0% center; }
+      100% { background-position:300% center; }
+    }
+    @keyframes floatCosmetic {
+      0%,100% { transform:translate(0,0) rotate(-8deg); }
+      25% { transform:translate(18px,-25px) rotate(8deg); }
+      50% { transform:translate(-10px,-45px) rotate(-5deg); }
+      75% { transform:translate(-20px,-18px) rotate(10deg); }
+    }
+    @keyframes cosmeticGlow {
+      from { opacity:.2; filter:drop-shadow(0 0 3px #f4b6dc); }
+      to { opacity:.5; filter:drop-shadow(0 0 14px #e7a8ff); }
+    }
+    @keyframes backgroundSlide {
+      0%,100% { background-position:0% 50%; }
+      50% { background-position:100% 50%; }
+    }
+
+    /* Dekorasi kosmetik melayang */
+    .floating-cosmetics {
+      position:fixed; inset:0; overflow:hidden; pointer-events:none; z-index:0;
+    }
+    .cosmetic {
+      position:absolute; display:block; opacity:.32;
+      filter:drop-shadow(0 5px 12px rgba(204,105,180,.25));
+      animation:floatCosmetic 8s ease-in-out infinite, cosmeticGlow 3s ease-in-out infinite alternate;
+    }
+    .c1{top:12%;left:5%;font-size:55px}
+    .c2{top:65%;left:12%;font-size:40px;animation-delay:1s}
+    .c3{top:20%;left:78%;font-size:60px;animation-delay:2s}
+    .c4{top:70%;left:85%;font-size:55px;animation-delay:.5s}
+    .c5{top:40%;left:25%;font-size:35px;animation-delay:1.5s}
+    .c6{top:15%;left:55%;font-size:45px;animation-delay:2.5s}
+    .c7{top:80%;left:40%;font-size:50px;animation-delay:1.2s}
+    .c8{top:48%;left:90%;font-size:42px;animation-delay:3s}
+    .c9{top:85%;left:65%;font-size:38px;animation-delay:2s}
+    .c10{top:35%;left:65%;font-size:45px;animation-delay:.8s}
+    .c11{top:55%;left:45%;font-size:42px;animation-delay:1.8s}
+    .c12{top:8%;left:35%;font-size:35px;animation-delay:2.2s}
+
+    nav, header, section, footer { position:relative; z-index:1; }
+    nav {
+      position:sticky; top:0; z-index:20;
+      padding:14px 12px;
+      background:rgba(255,255,255,.58);
+      backdrop-filter:blur(12px);
+    }
+    nav ul {
+      display:flex; justify-content:center; align-items:center; flex-wrap:wrap;
+      gap:34px; list-style:none; margin:0 auto; padding:13px 26px;
+      width:max-content; max-width:100%;
+      background:linear-gradient(135deg,#fce4ec,#f3e5f5);
+      border:1px solid #edc8df; border-radius:20px;
+      box-shadow:0 5px 20px rgba(180,120,160,.15);
+    }
+    nav li.empty { display:none; }
+    nav a {
+      color:#806779; text-decoration:none; font-size:15px;
+      transition:color .3s ease, letter-spacing .3s ease;
+    }
+    nav a:hover { color:#d16ba5; letter-spacing:1px; }
+
+    .container { width:min(1100px,92%); margin:auto; }
+    header { padding:65px 0 55px; }
+    .row {
+      display:flex; align-items:center; gap:42px;
+    }
+    .col-sm { flex:1; min-width:0; }
+    header h1 {
+      margin:0 0 22px; line-height:1.45;
+      font-family:"Playfair Display",serif; font-size:clamp(32px,4vw,49px);
+      font-weight:800; color:#a45d7a;
+      background:linear-gradient(90deg,#d16ba5,#9b5de5,#f15bb5,#b983ff,#d16ba5);
+      background-size:300% auto; background-clip:text; -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      animation:fontGradient 5s linear infinite,slideUp 1.2s ease both;
+    }
+    header h1::after { content:" ✧"; color:#d99ab4; -webkit-text-fill-color:#d99ab4; }
+    header ul { padding-left:22px; line-height:2; margin-bottom:25px; }
+    header ul li { animation:slideUp .8s ease both; }
+    header ul li:nth-child(2){animation-delay:.1s}
+    header ul li:nth-child(3){animation-delay:.2s}
+    header ul li:nth-child(4){animation-delay:.3s}
+    header ul li:nth-child(5){animation-delay:.4s}
+
+    /* Ukuran foto sedang */
+    img { display:block; max-width:100%; height:auto; }
+    .intro-img {
+      display:block; width:100%; max-width:320px; height:350px;
+      object-fit:cover; object-position:center top; margin:auto;
+      border:4px solid #fff; border-radius:22px;
+      box-shadow:0 8px 25px rgba(214,112,157,.2),0 0 0 2px #f8d5e4;
+      animation:fadeIn 1.5s ease both;
+      transition:transform .5s ease,box-shadow .5s ease;
+    }
+    .intro-img:hover { transform:scale(1.03); box-shadow:0 15px 35px rgba(164,93,122,.2); }
+
+    .button {
+      position:relative; display:inline-block; overflow:hidden;
+      padding:12px 25px; border:1px solid #e9b8cb; border-radius:30px;
+      background:#e9b8cb; color:#593b4a; text-decoration:none;
+      box-shadow:0 5px 15px rgba(164,93,122,.1);
+      transition:all .35s ease;
+    }
+    .button::before {
+      content:""; position:absolute; top:0; left:-100%; width:60%; height:100%;
+      background:rgba(255,255,255,.35); transform:skewX(-25deg); transition:left .6s ease;
+    }
+    .button:hover { background:#a45d7a; color:white; transform:translateY(-4px); }
+    .button:hover::before { left:150%; }
+
+    .skill-section { padding:25px 0 55px; }
+    .skill-list {
+      display:flex; justify-content:center; flex-wrap:wrap; gap:15px;
+      max-width:1000px; margin:auto; padding:0 20px; list-style:none;
+    }
+    .skill-list li {
+      padding:13px 20px; border:1px solid rgba(255,255,255,.8);
+      border-radius:30px; background:rgba(255,255,255,.58);
+      color:#875a7d; box-shadow:0 5px 18px rgba(180,100,155,.1);
+      transition:transform .3s ease,color .3s ease;
+    }
+    .skill-list li:hover { transform:translateY(-5px); color:#c47798; }
+
+    .project {
+      position:relative; overflow:hidden; margin:28px auto; padding:42px 25px;
+      border:1px solid rgba(255,255,255,.8); border-radius:24px;
+      background:linear-gradient(120deg,#fff0f5,#f7e8ff,#ffe4f1,#eee2ff);
+      background-size:300% 300%; animation:backgroundSlide 10s ease infinite;
+      box-shadow:0 8px 25px rgba(167,100,190,.15);
+      transition:transform .4s ease,box-shadow .4s ease;
+    }
+    .project:hover { transform:translateY(-5px); box-shadow:0 15px 35px rgba(167,100,190,.22); }
+    .project .container { position:relative; z-index:1; }
+    .project .row { gap:35px; }
+    .project h2 {
+      margin-top:0; font-family:"Playfair Display",serif; font-size:clamp(25px,3vw,34px);
+      color:#a34e83; line-height:1.35;
+    }
+    .project h2::after {
+      content:""; display:block; width:65px; height:3px; margin-top:12px;
+      border-radius:10px; background:#d99ab4; transition:width .5s ease;
+    }
+    .project h2:hover::after { width:120px; }
+    .project p { color:#786b7c; line-height:1.85; font-size:14px; }
+    .project img {
+      display:block; width:100%; max-width:380px; height:280px; margin:auto;
+      object-fit:cover; border:4px solid #fff; border-radius:20px;
+      box-shadow:0 5px 18px rgba(205,120,190,.2),0 0 0 2px #f8d5e4;
+      transition:transform .6s ease,box-shadow .6s ease;
+    }
+    .project img:hover { transform:scale(1.04); box-shadow:0 12px 28px rgba(205,120,190,.3); }
+    .right-alignment { text-align:left; }
+    .project.blue { background:linear-gradient(120deg,#fff0f5,#f3e8ff,#ffe4ef); }
+
+    /* Galeri makeup */
+    #mua-gallery {
+      padding:65px 5%; margin-top:35px;
+      background:linear-gradient(135deg,rgba(255,240,246,.92),rgba(240,229,255,.92),rgba(255,228,239,.92));
+      border-top:4px solid #edc1df;
+    }
+    .mua-gallery-heading { text-align:center; margin-bottom:35px; }
+    .mua-gallery-heading p { color:#c45b9e; letter-spacing:4px; font-size:12px; }
+    .mua-gallery-heading h2 {
+      color:#b65a98; font-family:"Playfair Display",serif;
+      font-size:clamp(30px,4vw,46px); margin:12px 0;
+    }
+    .mua-gallery-heading span { color:#856b80; font-size:14px; }
+    .mua-gallery-container {
+      display:flex; align-items:center; gap:15px; max-width:1150px; margin:auto;
+    }
+    .mua-gallery-list {
+      display:flex; gap:20px; overflow-x:auto; scroll-behavior:smooth;
+      scroll-snap-type:x mandatory; flex:1; min-width:0; padding:15px 5px 25px;
+      scrollbar-width:thin; scrollbar-color:#eab7d0 transparent;
+    }
+    .mua-gallery-card {
+      flex:0 0 calc((100% - 40px)/3); min-width:0; overflow:hidden;
+      border:1px solid #f5d1e0; border-radius:20px;
+      background:rgba(255,255,255,.9); box-shadow:0 8px 25px rgba(180,100,155,.15);
+      scroll-snap-align:start; transition:transform .3s ease;
+    }
+    .mua-gallery-card:hover { transform:translateY(-7px); }
+    .mua-gallery-card img {
+      width:100%; height:220px; object-fit:cover;
+    }
+    .mua-gallery-card h3 { color:#a34e83; font-size:17px; margin:17px 15px 7px; }
+    .mua-gallery-card p { color:#856b80; font-size:13px; margin:0 15px 20px; line-height:1.7; }
+    #mua-prev,#mua-next {
+      flex:0 0 40px; width:40px; height:40px; border:0; border-radius:50%;
+      background:#eab7d0; color:#784568; cursor:pointer; font-size:18px;
+      transition:background .3s ease,transform .3s ease;
+    }
+    #mua-prev:hover,#mua-next:hover { background:#df94bb; transform:scale(1.08); }
+
+    footer {
+      margin-top:35px; padding:48px 20px; text-align:center;
+      color:#75475d; background:linear-gradient(135deg,#fff0f5,#f8e6ed,#fff8fa);
+    }
+    footer h2 { color:#8b526c; line-height:1.7; font-family:"Playfair Display",serif; }
+    footer a { color:#a34e83; text-decoration:none; }
+    footer p { font-size:12px; color:#9b7b89; }
+
+    ::selection { background:#e9b8cb; color:#593b4a; }
+
+    @media (max-width:800px) {
+      .row { gap:25px; }
+      .project { padding:35px 20px; }
+      .mua-gallery-card { flex-basis:calc((100% - 20px)/2); }
+      .project img { max-width:100%; height:240px; }
+    }
+    @media (max-width:600px) {
+      nav ul { gap:20px; padding:12px 18px; }
+      nav a { font-size:14px; }
+      header { padding:42px 0; }
+      .row { flex-direction:column; align-items:stretch; }
+      header h1 { font-size:34px; }
+      .intro-img { max-width:260px; height:280px; }
+      .project { padding:28px 16px; margin:18px auto; }
+      .project .row { gap:20px; }
+      .project img { height:220px; }
+      .mua-gallery-container { gap:7px; }
+      .mua-gallery-card { flex-basis:100%; }
+      .mua-gallery-card img { height:190px; }
+      #mua-prev,#mua-next { flex-basis:30px; width:30px; height:30px; font-size:14px; }
+      .cosmetic { opacity:.22; }
+      .c1,.c3 { font-size:38px; }
+      .c4,.c7,.c10 { font-size:32px; }
+    }
+    @media (prefers-reduced-motion:reduce) {
+      *,*::before,*::after {
+        animation:none !important; scroll-behavior:auto !important; transition:none !important;
+      }
+    }
+
+    css
+/* ===== BEAUTY COLLECTION SECTION ===== */
+
+.beauty-collection {
+    padding: 65px 6%;
+    text-align: center;
+    background: linear-gradient(135deg, #fff0f7, #f4e8ff, #ffe6f1);
+}
+
+.beauty-collection .subtitle {
+    color: #bd6393;
+    font-size: 13px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.beauty-collection h2 {
+    color: #a94476;
+    font-size: 34px;
+    font-family: Georgia, serif;
+    margin: 12px 0;
+}
+
+.beauty-collection .description {
+    color: #76566a;
+    font-size: 14px;
+    margin-bottom: 35px;
+}
+
+.beauty-grid {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.beauty-card {
+    background: rgba(255,255,255,0.8);
+    padding: 12px;
+    border-radius: 18px;
+    box-shadow: 0 7px 20px rgba(170, 80, 130, 0.12);
+    transition: 0.4s ease;
+}
+
+.beauty-card:hover {
+    transform: translateY(-9px);
+    box-shadow: 0 12px 25px rgba(170, 80, 130, 0.2);
+}
+
+.beauty-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 13px;
+    display: block;
+}
+
+.beauty-card h3 {
+    color: #a94476;
+    font-size: 19px;
+    margin: 17px 0 8px;
+}
+
+.beauty-card p {
+    color: #79576b;
+    font-size: 12px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.beauty-button {
+    display: inline-block;
+    padding: 9px 20px;
+    background: #d77ca7;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+.beauty-button:hover {
+    background: #a94476;
+    transform: scale(1.05);
+}
+
+/* RESPONSIVE */
+@media(max-width: 768px) {
+    .beauty-collection {
+        padding: 45px 5%;
+    }
+
+    .beauty-collection h2 {
+        font-size: 25px;
+    }
+
+    .beauty-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        gap: 20px;
+    }
+
+    .beauty-card img {
+        height: 220px;
+    }
+}
+/* ===== MAKEUP RECOMMENDATIONS ===== */
+
+.makeup-section {
+    padding: 65px 6%;
+    text-align: center;
+    background: linear-gradient(135deg, #fff0f7, #f2e8ff, #ffe5f0);
+}
+
+.makeup-section .makeup-subtitle {
+    color: #c16b98;
+    font-size: 12px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.makeup-section h2 {
+    color: #a94476;
+    font-family: Georgia, serif;
+    font-size: 34px;
+    margin: 12px 0;
+}
+
+.makeup-section .makeup-description {
+    color: #79576b;
+    font-size: 14px;
+    margin-bottom: 35px;
+}
+
+.makeup-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.makeup-card {
+    background: rgba(255,255,255,0.85);
+    padding: 13px;
+    border-radius: 18px;
+    box-shadow: 0 7px 20px rgba(170,80,130,0.13);
+    transition: 0.4s ease;
+    overflow: hidden;
+}
+
+.makeup-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(170,80,130,0.22);
+}
+
+.makeup-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 13px;
+    transition: 0.5s;
+}
+
+.makeup-card:hover img {
+    transform: scale(1.04);
+}
+
+.makeup-card h3 {
+    color: #a94476;
+    font-size: 20px;
+    margin: 15px 0 8px;
+}
+
+.makeup-card p {
+    color: #79576b;
+    font-size: 12px;
+    line-height: 1.7;
+    min-height: 55px;
+}
+
+.makeup-tag {
+    display: inline-block;
+    background: #f9d9e9;
+    color: #a94476;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 11px;
+    margin: 8px 0 13px;
+}
+
+.makeup-btn {
+    display: inline-block;
+    padding: 9px 20px;
+    background: linear-gradient(135deg, #dc8bb3, #b77bd1);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+.makeup-btn:hover {
+    background: #a94476;
+    transform: scale(1.06);
+}
+
+@media(max-width: 768px) {
+    .makeup-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 13px;
+    }
+
+    .makeup-section h2 {
+        font-size: 26px;
+    }
+
+    .makeup-card img {
+        height: 150px;
+    }
+}
+
+@media(max-width: 480px) {
+    .makeup-grid {
+        grid-template-columns: 1fr;
+        max-width: 320px;
+    }
+
+    .makeup-card img {
+        height: 190px;
+    }
+}
+
+  </style>
+ </head>
+ <body>
+  <!-- Dekorasi kosmetik melayang -->
+  <div aria-hidden="true" class="floating-cosmetics">
+   <span class="cosmetic c1">
+    💄
+   </span>
+   <span class="cosmetic c2">
+    💋
+   </span>
+   <span class="cosmetic c3">
+    🎀
+   </span>
+   <span class="cosmetic c4">
+    🪞
+   </span>
+   <span class="cosmetic c5">
+    ✨
+   </span>
+   <span class="cosmetic c6">
+    💗
+   </span>
+   <span class="cosmetic c7">
+    🧴
+   </span>
+   <span class="cosmetic c8">
+    🌸
+   </span>
+   <span class="cosmetic c9">
+    💎
+   </span>
+   <span class="cosmetic c10">
+    🦋
+   </span>
+   <span class="cosmetic c11">
+    💅
+   </span>
+   <span class="cosmetic c12">
+    ✦
+   </span>
+  </div>
+  <nav>
+   <ul>
+    <li>
+     <a href="#home">
+      Home
+     </a>
+    </li>
+    <li>
+     <a href="profil.html">
+      Profil
+     </a>
+    </li>
+    <li>
+     <a href="https://www.instagram.com/acabuoo_21/" rel="noopener" target="_blank">
+      Instagram
+     </a>
+    </li>
+    <li>
+     <a href="#contact">
+      Contact
+     </a>
+    </li>
+   </ul>
+  </nav>
+  <header id="home">
+   <div class="container">
+    <div class="row">
+     <div class="col-sm">
+      <h1>
+       ୨ৎ 𝓗𝓲, 𝓘&rsquo;𝓪𝓶 𝓐𝓬𝓪 ♡
+       <br/>
+       𓂃 ࣪˖ 𝓐𝓬𝓱𝓪 𝓑𝓮𝓪𝓾𝓽𝔂 𝓢𝓽𝓾𝓭𝓲𝓸 🎀
+      </h1>
+      <ul>
+       <li>
+        Professional Makeup Artist (MUA)
+       </li>
+       <li>
+        Graduated from a Professional Makeup Academy
+       </li>
+       <li>
+        2+ years of experience in the beauty industry
+       </li>
+       <li>
+        Collaborating with brides, models, and various beauty brands
+       </li>
+       <li>
+        Specializing in bridal makeup, party makeup, and professional beauty looks
+       </li>
+      </ul>
+      <a class="button" href="https://www.linkedin.com/" rel="noopener" target="_blank">
+       Connect with me
+      </a>
+     </div>
+     <div class="col-sm">
+      <figure>
+       <img alt="Foto profil Acha Beauty Studio" class="intro-img" src="cca.jpg"/>
+      </figure>
+     </div>
+    </div>
+   </div>
+  </header>
+  <section class="skill-section">
+   <ul class="skill-list">
+    <li>
+     01 &middot; Graphic Design
+    </li>
+    <li>
+     02 &middot; User Experience
+    </li>
+    <li>
+     03 &middot; User Interface Design
+    </li>
+    <li>
+     04 &middot; Design Thinking
+    </li>
+    <li>
+     05 &middot; User Research
+    </li>
+   </ul>
+  </section>
+  <section class="project blue">
+   <div class="container">
+    <div class="row">
+     <div class="col-sm">
+      <figure>
+       <img alt="Inspirasi nail art" src="kk.jpeg"/>
+      </figure>
+     </div>
+     <div class="col-sm">
+      <h2>
+       Nail Art
+       <br/>
+       Enhance Your Look with Creativity
+      </h2>
+      <p>
+       Nail art is a creative way to beautify nails by adding unique designs, colors, and patterns. It not only enhances personal style but also reflects personality and mood.
+      </p>
+      <p>
+       Through attractive designs, excellent product quality, and authentic brand storytelling, this branding strategy aims to strengthen a brand's position in the competitive cosmetics market and build emotional connections with consumers.
+      </p>
+      <p>
+       Furthermore, effective branding can help women feel more confident by providing beauty products that suit their needs.
+      </p>
+      <a class="button" href="detail.html">
+       Read More
+      </a>
+     </div>
+    </div>
+   </div>
+  </section>
+  <section class="project">
+   <div class="container">
+    <div class="row">
+     <div class="col-sm">
+      <h2>
+       Branding Strategy for Female Cosmetics
+      </h2>
+      <p>
+       An effective branding strategy is the key to building a strong brand image for women's cosmetics. By understanding the needs and preferences of the target market, cosmetic brands can create a unique identity and present a modern, elegant, and trustworthy image.
+      </p>
+      <p>
+       With endless design possibilities, from minimalist to luxurious styles, nail art has become a popular trend in the beauty industry. Different colors and creative designs can make nails look more beautiful, elegant, and attractive.
+      </p>
+      <p>
+       Nail art is more than just a beauty treatment; it is a form of self-expression that allows everyone to showcase creativity and personal style.
+      </p>
+      <a class="button" href="detail2.html">
+       Read More
+      </a>
+     </div>
+     <div class="col-sm">
+      <figure>
+       <img alt="Makeup artist dan hasil riasan" src="mua.jpg"/>
+      </figure>
+     </div>
+    </div>
+   </div>
+  </section>
+  <section class="project blue">
+   <div class="container">
+    <div class="row">
+     <div class="col-sm">
+      <figure>
+       <img alt="Inspirasi eyelash extension" src="sulam.jpg"/>
+      </figure>
+     </div>
+     <div class="col-sm">
+      <h2>
+       Eyelash Extension
+       <br/>
+       For a More Captivating Look
+      </h2>
+      <p>
+       Eyelash extensions are a beauty treatment designed to make natural eyelashes look longer, fuller, and more defined. This treatment enhances the eyes, creates a fresh and attractive appearance, and reduces the time needed for daily makeup.
+      </p>
+      <p>
+       With various styles and techniques available, eyelash extensions can be customized to suit different eye shapes and personal preferences. From natural and elegant looks to bold and glamorous styles, they help create beautiful and captivating eyes.
+      </p>
+      <p>
+       Eyelash extensions are more than just a beauty treatment. They are a way to enhance confidence and express personal style.
+      </p>
+      <a class="button" href="detail3.html">
+       Read More
+      </a>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Galeri makeup -->
+  <section id="mua-gallery">
+   <div class="mua-gallery-heading">
+    <p>
+     BEAUTY COLLECTION
+    </p>
+    <h2>
+     My Makeup
+    </h2>
+    <span>
+     Discover the art of beauty and makeup.
+    </span>
+   </div>
+   <div class="mua-gallery-container">
+    <button aria-label="Foto sebelumnya" id="mua-prev" type="button">
+     ❮
+    </button>
+    <div class="mua-gallery-list" id="mua-gallery-list">
+     <article class="mua-gallery-card">
+      <img alt="Koleksi kosmetik" src="cosmetics.jpg"/>
+      <h3>
+       Cosmetic Collection
+      </h3>
+      <p>
+       Beauty in every detail.
+      </p>
+     </article>
+     <article class="mua-gallery-card">
+      <img alt="Makeup artist" src="mua.jpg"/>
+      <h3>
+       Makeup Artist
+      </h3>
+      <p>
+       Every face tells a story.
+      </p>
+     </article>
+     <article class="mua-gallery-card">
+      <img alt="Inspirasi makeup" src="m2.jpg"/>
+      <h3>
+       Beauty Inspiration
+      </h3>
+      <p>
+       Find your own beauty style.
+      </p>
+     </article>
+     <article class="mua-gallery-card">
+      <img alt="Makeup pengantin" src="m3.jpg"/>
+      <h3>
+       Bridal Makeup
+      </h3>
+      <p>
+       Beautiful moments, forever.
+      </p>
+     </article>
+    </div>
+    <button aria-label="Foto berikutnya" id="mua-next" type="button">
+     ❯
+    </button>
+   </div>
+  </section>
+  <footer id="contact">
+   <h2>
+    Any Questions?
+    <br/>
+    Find Me Here
+   </h2>
+   <p>
+    Email:
+    <a href="mailto:email@achabo.id">
+     email@achabo.id
+    </a>
+   </p>
+   <p>
+    Designed &amp; developed by Acha &middot; 2007
+   </p>
+   ```html
+<!-- ===== BEAUTY COLLECTION ===== -->
+
+<section class="beauty-collection" id="beauty-collection">
+
+    <p class="subtitle">Acha Beauty Studio</p>
+
+    <h2>Our Beauty Collection</h2>
+
+    <p class="description">
+        Discover your beauty with our special treatments.
+    </p>
+
+    <div class="beauty-grid">
+
+        <!-- NAIL ART -->
+        <div class="beauty-card">
+
+            <img src="img/n5.jpeg"
+                 alt="Nail Art Collection">
+
+            <h3>Nail Art</h3>
+
+            <p>
+                Beautiful nail designs with elegant colors,
+                glitter and creative decorations.
+            </p>
+
+            <a href="#gallery" class="beauty-button">
+                Explore Collection
+            </a>
+
+        </div>
+
+
+        <!-- EYELASH -->
+        <div class="beauty-card">
+
+            <img src="img/s1.jpeg"
+                 alt="Eyelash Extension">
+
+            <h3>Eyelash Extension</h3>
+
+            <p>
+                Enhance your eyes with beautiful,
+                natural and glamorous eyelashes.
+            </p>
+
+            <a href="#contact" class="beauty-button">
+                Explore Collection
+            </a>
+
+        </div>
+
+
+        <!-- SULAM ALIS -->
+        <div class="beauty-card">
+
+            <img src="img/s6.jpeg"
+                 alt="Sulam Alis">
+
+            <h3>Eyebrow Embroidery</h3>
+
+            <p>
+                Create beautiful and well-shaped eyebrows
+                for a natural and elegant appearance.
+            </p>
+
+            <a href="#contact" class="beauty-button">
+                Explore Collection
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===== END BEAUTY COLLECTION ===== -->
+```
+<!-- ===== MAKEUP RECOMMENDATIONS ===== -->
+
+<section class="makeup-section" id="makeup-recommendations">
+
+    <p class="makeup-subtitle">Acha Beauty Studio</p>
+
+    <h2>Makeup Recommendations</h2>
+
+    <p class="makeup-description">
+        Discover your favorite beauty products
+        for a flawless and glowing look.
+    </p>
+
+    <div class="makeup-grid">
+
+        <!-- WARDAH -->
+        <div class="makeup-card">
+            <img src="makeup1.jpeg" alt="Wardah Makeup">
+
+            <h3>Wardah</h3>
+
+            <span class="makeup-tag">Natural Beauty</span>
+
+            <p>
+                Pilihan makeup untuk tampilan natural,
+                fresh, dan nyaman digunakan sehari-hari.
+            </p>
+
+            <a href="https://www.wardahbeauty.com/"
+               target="_blank" class="makeup-btn">
+                Explore Brand
+            </a>
+        </div>
+
+        <!-- MAKE OVER -->
+        <div class="makeup-card">
+            <img src="makeup2.jpeg" alt="Make Over Makeup">
+
+            <h3>Make Over</h3>
+
+            <span class="makeup-tag">Professional Look</span>
+
+            <p>
+                Makeup dengan pilihan produk untuk
+                menciptakan tampilan glamor dan elegan.
+            </p>
+
+            <a href="https://www.makeoverforall.com/"
+               target="_blank" class="makeup-btn">
+                Explore Brand
+            </a>
+        </div>
+
+        <!-- MAYBELLINE -->
+        <div class="makeup-card">
+            <img src="makeup3.jpeg" alt="Maybelline Makeup">
+
+            <h3>Maybelline</h3>
+
+            <span class="makeup-tag">Everyday Makeup</span>
+
+            <p>
+                Berbagai pilihan makeup untuk tampilan
+                cantik dan menarik dalam berbagai aktivitas.
+            </p>
+
+            <a href="https://www.maybelline.com/"
+               target="_blank" class="makeup-btn">
+                Explore Brand
+            </a>
+        </div>
+
+        <!-- EMINA -->
+        <div class="makeup-card">
+            <img src="makeup4.jpeg" alt="Emina Makeup">
+
+            <h3>Emina</h3>
+
+            <span class="makeup-tag">Fresh & Cute</span>
+
+            <p>
+                Pilihan makeup dengan kesan ceria,
+                fresh, dan cocok untuk tampilan remaja.
+            </p>
+
+            <a href="https://www.eminacosmetics.com/"
+               target="_blank" class="makeup-btn">
+                Explore Brand
+            </a>
+        </div>
+
+        <!-- SOMETHINC -->
+        <div class="makeup-card">
+            <img src="makeup5.jpeg" alt="Somethinc Makeup">
+
+            <h3>Somethinc</h3>
+
+            <span class="makeup-tag">Modern Beauty</span>
+
+            <p>
+                Pilihan produk kecantikan untuk
+                tampilan makeup modern dan stylish.
+            </p>
+
+            <a href="https://somethinc.com/"
+               target="_blank" class="makeup-btn">
+                Explore Brand
+            </a>
+        </div>
+
+        <!-- L'OREAL -->
+        <div class="makeup-card">
+            <img src="makeup6.jpeg" alt="L'Oreal Makeup">
+
+            <h3>L'Oreal Paris</h3>
+
+            <span class="makeup-tag">Elegant Look</span>
+
+            <p>
+                Koleksi makeup untuk menciptakan
+                tampilan elegan dan menawan.
+            </p>
+
+            <a href="https://www.loreal-paris.com/"
+               target="_blank" class="makeup-btn">
+                Explore Brand
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===== END MAKEUP RECOMMENDATIONS ===== -->
+  </footer>
+  <script>
+   (function () {
+      const gallery = document.getElementById("mua-gallery-list");
+      const nextButton = document.getElementById("mua-next");
+      const prevButton = document.getElementById("mua-prev");
+
+      if (!gallery || !nextButton || !prevButton) return;
+
+      nextButton.addEventListener("click", function () {
+        gallery.scrollBy({ left: gallery.clientWidth * 0.8, behavior: "smooth" });
+      });
+
+      prevButton.addEventListener("click", function () {
+        gallery.scrollBy({ left: -gallery.clientWidth * 0.8, behavior: "smooth" });
+      });
+    })();
+  </script>
+ </body>
+</html>
